@@ -1,0 +1,21 @@
+{
+  "name": "Campana",
+  "version": "1.0.0",
+  "description": "Hotel Website named Campana",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^4.3.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paulina Dzwonek",
+  "license": "ISC"
+}

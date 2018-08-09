@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  max-width: $max-width;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.row {
+    margin: 0 -$base-margin;
+}
+
+.row::before,
+.row::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+[class*='col'] {
+  display: block;
+  float: left;
+  min-height: 1px;
+  width: 8.33333%;
+  padding: 0;
+}
+
+.col1 {
+  width: 8.33333%;
+}
+
+.col2 {
+  width: 16.6667%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.3333%;
+}
+
+.col5 {
+  width: 41.6667%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col7 {
+  width: 58.3333%;
+}
+
+.col8 {
+  width: 66.6667%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+.col10 {
+  width: 83.3333%;
+}
+
+.col11 {
+  width: 91.6667%;
+}
+
+.col12 {
+  width: 100%;
+}
