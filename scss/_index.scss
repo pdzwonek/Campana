@@ -3,34 +3,21 @@
     height: 70px;
     text-transform: uppercase;
     position: fixed;
-
-    &__mobile {
-        float: right;
-        position: relative;
-    }
-
-    &__btn {
-        padding: $base-padding*2 $base-padding*3;
-        cursor: pointer;
-        div {
-            position: absolute;
-            padding: $base-padding;
-            line-height: 1.2;
-            vertical-align: middle;
-        }
-        span {
-            display: block;
-            width: $headers-font-size;
-            height: 3px;
-            margin: $base-margin/3 0;
-            background-color: $base-color;
-        }
-    }
-
     &__menu {
         max-width: 100%;
         padding: $base-padding*6 0 0 0;
         list-style: none;
+        visibility: visible;
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    //after clicking the button - humburger menu
+
+    &--unvisible {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
     }
 
     &__item {
@@ -47,15 +34,42 @@
         display: block;
         text-align: center;
         padding: $base-padding*2;
+        &:hover {
+            font-weight: 700;
+        }
     }
 
     &--active {
         font-weight: 700;
     }
+}
 
-    //after clicking the button - humburger menu
-    &--unvisible {
-        display: none;
+.mobile {
+    float: right;
+    position: relative;
+    &__btn {
+        padding: $base-padding*2 $base-padding*3;
+        cursor: pointer;
+        background: transparent;
+        span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            margin: $base-margin/3 0;
+            background-color: $base-color;
+            transition: 1s;
+        }
+    }
+    &--change {
+        &:first-child {
+            transform: rotate(-45deg) translate(-4px, 8px);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:last-child {
+            transform: rotate(45deg) translate(-2px, -6px);
+        }
     }
 }
 
@@ -63,9 +77,6 @@
 @media (min-width: $tablet) {
     .nav {
         height: 100px;
-        &__mobile {
-            display: none;
-        }
         &__menu {
             display: block;
             max-width: 80%;
@@ -84,6 +95,9 @@
         &__link {
             padding: $base-padding*4 $base-padding*2;
         }
+    }
+    .mobile {
+        display: none;
     }
 }
 
