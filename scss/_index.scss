@@ -45,7 +45,7 @@
     }
 }
 
-//mobile navigation//
+//mobile navigation - humburger//
 
 .mobile {
     float: right;
@@ -91,27 +91,32 @@
     &__title {
         display: none;
     }
-    &__vertical-text {
-        height: 100%;
-        text-transform: uppercase;
-        align-items: center;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        p {
-            writing-mode: vertical-rl;
-            text-orientation: sideways;
-            transform: rotate(180deg);
-            margin-top: 50px;
-        }
-        div {
-            margin-top: $base-padding*2;
-            transform: rotate(90deg);
-            height: 2px;
-            width: 40px;
-            background-color: $base-color;
-        }
+}
+
+.vertical-text {
+    height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    p {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        transform: rotate(180deg);
+        margin-top: 50px;
     }
+    &__facebook-icon {
+        display: none;
+    }
+}
+
+.long-line {
+    margin-top: $base-padding*2;
+    transform: rotate(90deg);
+    height: 1px;
+    width: 45px;
+    background-color: $base-color;
 }
 
 
@@ -156,13 +161,6 @@
                 width: $base-width*11;
             }
         }
-        &__vertical-text {
-            width: $base-width;
-            align-items: flex-start;
-            p {
-                margin-left: $base-padding;
-            }
-        }
         &__title {
             display: block;
             margin-left: $base-width;
@@ -173,10 +171,9 @@
                 // left: 50px;
                 margin-left: $base-width;
             }
-            p, h1, button {
-                padding: $base-padding/2;
-            }
             h1, button {
+                padding: $base-padding/2 auto;
+                line-height: 1;
                 text-transform: uppercase;
             }
             h1 {
@@ -184,6 +181,31 @@
                 line-height: 1;
             }
         }
+        &__paragraph {
+            line-height: 1.5;
+            padding-bottom: $base-padding*2;
+        }
+    }
+    .vertical-text {
+        width: $base-width;
+        align-items: flex-start;
+        position: relative;
+        p {
+            margin-left: $base-padding*1.2;
+        }
+        &__facebook-icon {
+            display: block;
+            margin-left: $base-padding*0.7;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .short-line {
+        height: 1px;
+        width: 20px;
+        background-color: $base-color;
+        display: inline-block;
+        margin-bottom: 4px;
     }
 }
 
