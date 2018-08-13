@@ -1,17 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+$base-width: 100%/12;
+
 .container {
-  width: 100%;
   max-width: $max-width;
-  float: left;
-  position: relative;
   margin: 0 auto;
 }
 
 .container-fluid {
     width: 100%;
+    margin: 0 auto;
 }
 
 .row {
-    margin: 0 -$base-margin;
+    margin: 0;
+    border: 2px solid black;
+    height: 100%;
 }
 
 .row::before,
@@ -22,57 +28,15 @@
 }
 
 [class*='col'] {
-  display: block;
   float: left;
   min-height: 1px;
-  width: 8.33333%;
-  padding: 0;
+  width: $base-width;
+  padding: $base-padding;
+  border: 2px solid red;
 }
 
-.col1 {
-  width: 8.33333%;
-}
-
-.col2 {
-  width: 16.6667%;
-}
-
-.col3 {
-  width: 25%;
-}
-
-.col4 {
-  width: 33.3333%;
-}
-
-.col5 {
-  width: 41.6667%;
-}
-
-.col6 {
-  width: 50%;
-}
-
-.col7 {
-  width: 58.3333%;
-}
-
-.col8 {
-  width: 66.6667%;
-}
-
-.col9 {
-  width: 75%;
-}
-
-.col10 {
-  width: 83.3333%;
-}
-
-.col11 {
-  width: 91.6667%;
-}
-
-.col12 {
-  width: 100%;
+@for $i from 1 through 12{
+  .col#{$i}{
+    width: $base-width * $i;
+  }
 }

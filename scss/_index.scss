@@ -1,15 +1,18 @@
 .nav {
-    width: 100%;
-    height: 70px;
-    text-transform: uppercase;
     position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    text-transform: uppercase;
+    z-index: 99;
     &__menu {
         max-width: 100%;
-        padding: $base-padding*6 0 0 0;
         list-style: none;
         visibility: visible;
         opacity: 1;
         transition: all 1s;
+        clear: both;
+        background-color: $primary-bgr-color;
     }
 
     //after clicking the button - humburger menu
@@ -21,13 +24,11 @@
     }
 
     &__item {
-        display: block;
         height: 100%;
     }
 
     &__logo {
-        max-width: 20%;
-        float: left;
+
     }
 
     &__link {
@@ -44,6 +45,8 @@
     }
 }
 
+//mobile navigation//
+
 .mobile {
     float: right;
     position: relative;
@@ -51,6 +54,7 @@
         padding: $base-padding*2 $base-padding*3;
         cursor: pointer;
         background: transparent;
+        float: right;
         span {
             display: block;
             width: 28px;
@@ -73,21 +77,63 @@
     }
 }
 
+//header section//
+
+.header {
+    margin-top: 89px;
+    height: 420px;
+    &__photo {
+        background: #b1b1b1;
+        height: 100%;
+        max-width: 100%;
+        float: right;
+    }
+    &__title {
+        display: none;
+    }
+    &__vertical-text {
+        height: 100%;
+        text-transform: uppercase;
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        p {
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+            transform: rotate(180deg);
+            margin-top: 50px;
+        }
+        div {
+            margin-top: $base-padding*2;
+            transform: rotate(90deg);
+            height: 2px;
+            width: 40px;
+            background-color: $base-color;
+        }
+    }
+}
+
 
 @media (min-width: $tablet) {
     .nav {
-        height: 100px;
         &__menu {
-            display: block;
-            max-width: 80%;
-            float: right;
-            height: 100%;
+            clear: none;
+            float: left;
             padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .col12 {
+            width: $base-width*10;
+        }
+        &--unvisible {
+            visibility: visible;
+            opacity: 1;
+            transition: 0s;
         }
         &__item {
             display: inline-block;
-            float: left;
-            height: 100%;
             &:last-child {
                 padding-right: $base-padding*2;
             }
@@ -99,15 +145,50 @@
     .mobile {
         display: none;
     }
+
+    //header section//
+    .header {
+        height: 500px;
+        margin-top: 101px;
+        &__photo {
+            max-width: 65%;
+            .col10 {
+                width: $base-width*11;
+            }
+        }
+        &__vertical-text {
+            width: $base-width;
+            align-items: flex-start;
+            p {
+                margin-left: $base-padding;
+            }
+        }
+        &__title {
+            display: block;
+            margin-left: $base-width;
+            position: relative;
+            .col5 {
+                position: absolute;
+                top: 50px;
+                // left: 50px;
+                margin-left: $base-width;
+            }
+            p, h1, button {
+                padding: $base-padding/2;
+            }
+            h1, button {
+                text-transform: uppercase;
+            }
+            h1 {
+                font-size: $headers-font-size*1.6;
+                line-height: 1;
+            }
+        }
+    }
 }
 
 @media (min-width: $desktop) {
     .nav {
-        &__menu {
-            max-width: 80%;
-            float: right;
-            height: 100%;
-        }
         &__item {
             &:last-child {
                 padding-right: 0;
@@ -115,6 +196,18 @@
         }
         &__link {
             padding: $base-padding*4;
+        }
+    }
+    .header {
+        height: 750px;
+        &__title {
+            .col5 {
+                top: 100px;
+                left: 100px;
+            }
+            h1 {
+                font-size: $headers-font-size*2;
+            }
         }
     }
 }
