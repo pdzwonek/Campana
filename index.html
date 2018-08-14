@@ -12,89 +12,131 @@
 </head>
 
 <body>
-            <nav class="nav container-fluid">
-                <div class="row">
-                    <div class="nav__logo col2">
-                        <a href="#">
-                          <img src="" alt="Logo Campana" />
-                        </a>
-                    </div>
+    <nav class="nav container-fluid">
+        <div class="row">
+            <div class="nav__logo col2">
+                <a href="#">
+                  <img src="" alt="Logo Campana" />
+                </a>
+            </div>
 
-                    <!--humburger menu on mobile devices-->
-                    <div class="mobile col10">
-                        <button id="humburger" class="mobile__btn">
-                            <span class="mobile__item"></span>
-                            <span class="mobile__item"></span>
-                            <span class="mobile__item"></span>
-                        </button>
-                    </div>
+                <!--humburger menu on mobile devices-->
+            <div class="mobile col10">
+                <button id="humburger" class="mobile__btn">
+                    <span class="mobile__item"></span>
+                    <span class="mobile__item"></span>
+                    <span class="mobile__item"></span>
+                </button>
+            </div>
 
 
-                    <!--navigation menu for all devices-->
-                    <ul id="menu" class="nav__menu nav--unvisible col12">
-                        <li class="nav__item">
-                            <a class="nav__link nav--active" href="">home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="">pokoje</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="">cennik</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="">przyjęcia</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="">galeria</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="">kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
+            <!--navigation menu for all devices-->
+            <ul id="menu" class="nav__menu nav--unvisible col12">
+                <li class="nav__item">
+                    <a class="nav__link nav__link--active" href="">home</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">pokoje</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">cennik</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">przyjęcia</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">galeria</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="clear"></div>
 
-
+    <!-- HEADER SECTION -->
     <header class="header container-fluid">
-            <div class="row">
-                <div class="vertical-text col2">
-                    <a class="vertical-text__facebook-icon "href="">
-                        <img src="img/facebook.svg" alt="Ikona facebook" />
-                    </a>
-                    <p>
-                        Campana Dom Gościnny
-                    </p>
-                    <div class="long-line"></div>
-                </div>
-                <div class="header__photo col10">
-                    <img src="" alt="Zdjęcie pokoju" />
-                </div>
+        <div class="row">
+            <div class="vertical-text col2">
+                <a class="vertical-text__facebook-icon "href="">
+                    <img src="img/facebook.svg" alt="Ikona facebook" />
+                </a>
+                <p class="vertical-text__paragraph">
+                    Campana Dom Gościnny
+                </p>
+                <div class="long-line"></div>
+            </div>
+            <div class="header__photo col10">
+                <img src="" alt="Zdjęcie pokoju" />
+            </div>
 
-                <!--only for tablet and desktop-->
-                <div class="container header__title">
-                    <div class="row">
-                        <div class="col5">
-                            <p>
-                                CAMPANA
-                            </p>
-                            <h1>
-                                Twoje miejsce<br /> na odpoczynek
-                            </h1>
-                            <p class="header__paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus. Phasellus euismod pharetra ipsum quis euismod.
-                            </p>
-                            <button>więcej</button>
-                            <div class="short-line"></div>
-                        </div>
+            <!--only for tablet and desktop-->
+            <div class="container header__title">
+                <div class="row">
+                    <div class="col5 header__text">
+                        <p>
+                            CAMPANA
+                        </p>
+                        <h1 class="header__main-text">
+                            Twoje miejsce<br /> na odpoczynek
+                        </h1>
+                        <p class="header__paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus. Phasellus euismod pharetra ipsum quis euismod.
+                        </p>
+                        <button class="header__btn">więcej</button>
+                        <div class="short-line"></div>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
-    <main>
 
+    <!--MAIN PAGE-->
+    <main class="container-fluid">
+
+        <!--ABOUT SECTION-->
+        <section class="about container">
+            <div class="row">
+                <div class="col12 about__header">
+                    <div class="row">
+                        <div class="col12">
+                            <h2 class="section-header">Pokoje &<br />sala bankietowa</h2>
+                        </div>
+                        <div class="col12">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus.Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col12 about__photo about__photo--move-up">
+                    <img src="" alt="Zdjęcie pokoju" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col12 about__photo about__photo--move-right">
+                    <img src="" alt="Zdjęcie pokoju" />
+                </div>
+                <div class="col12 about__header about__paragraph">
+                    <p class="about__paragraph--mobile">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus. Morbi vel nisi non urna pretium suscipit.
+                    </p>
+                    <p class="about__paragraph--mobile">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus.
+                    </p>
+                    <p class="about__paragraph--mobile">
+                        Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Morbi vel nisi non urna pretium suscipit.
+                    </p>
+                    <button class="about__btn--mobile">więcej</button>
+                    <div class="short-line"></div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery container-fluid">
+
+        </section>
     </main>
     <footer>
 

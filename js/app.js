@@ -6,7 +6,7 @@ humburger.addEventListener('click', function() {
     var humburgerItem = document.getElementsByClassName('mobile__item');
 
     for(i=0; i<humburgerItem.length; i++){
-        humburgerItem[i].classList.toggle('mobile--change');
+        humburgerItem[i].classList.toggle('mobile__item--change');
     }
 
     //menu animation//

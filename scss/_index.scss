@@ -28,7 +28,9 @@
     }
 
     &__logo {
-
+        background-color: $primary-bgr-color;
+        // height: 25px;
+        // padding: $base-padding*2;
     }
 
     &__link {
@@ -38,16 +40,18 @@
         &:hover {
             font-weight: 700;
         }
+        &--active {
+            font-weight: 700;
+        }
     }
 
-    &--active {
-        font-weight: 700;
-    }
+
 }
 
 //mobile navigation - humburger//
 
 .mobile {
+    background-color: $primary-bgr-color;
     float: right;
     position: relative;
     &__btn {
@@ -55,24 +59,24 @@
         cursor: pointer;
         background: transparent;
         float: right;
-        span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            margin: $base-margin/3 0;
-            background-color: $base-color;
-            transition: 1s;
-        }
     }
-    &--change {
-        &:first-child {
-            transform: rotate(-45deg) translate(-4px, 8px);
-        }
-        &:nth-child(2) {
-            opacity: 0;
-        }
-        &:last-child {
-            transform: rotate(45deg) translate(-2px, -6px);
+    &__item {
+        display: block;
+        width: 28px;
+        height: 3px;
+        margin: $base-margin/3 0;
+        background-color: $base-color;
+        transition: 1s;
+        &--change {
+            &:first-child {
+                transform: rotate(-45deg) translate(-4px, 8px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                transform: rotate(45deg) translate(-2px, -6px);
+            }
         }
     }
 }
@@ -83,7 +87,7 @@
     margin-top: 89px;
     height: 420px;
     &__photo {
-        background: #b1b1b1;
+        background: $second-color;
         height: 100%;
         max-width: 100%;
         float: right;
@@ -100,11 +104,11 @@
     align-items: center;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    p {
+    &__paragraph {
         writing-mode: vertical-rl;
         text-orientation: sideways;
         transform: rotate(180deg);
-        margin-top: 50px;
+        margin-top: 30px;
     }
     &__facebook-icon {
         display: none;
@@ -119,6 +123,32 @@
     background-color: $base-color;
 }
 
+.short-line {
+    height: 1px;
+    width: 20px;
+    background-color: $base-color;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+//about section//
+
+.about {
+    &__header {
+        margin: $base-margin*2 0;
+    }
+    &__photo {
+        background-color: $third-color;
+        height: 380px;
+    }
+    &__paragraph--mobile, &__btn--mobile {
+        padding: $base-padding;
+    }
+}
+
+// .section-header {
+//     padding: $base-padding*4 $base-padding $base-padding*2 $base-padding;
+// }
 
 @media (min-width: $tablet) {
     .nav {
@@ -128,8 +158,6 @@
             padding: 0;
             display: flex;
             justify-content: flex-end;
-        }
-        .col12 {
             width: $base-width*10;
         }
         &--unvisible {
@@ -151,38 +179,33 @@
         display: none;
     }
 
-    //header section//
+    //HEADER SECTION//
     .header {
         height: 500px;
         margin-top: 101px;
         &__photo {
             max-width: 65%;
-            .col10 {
-                width: $base-width*11;
-            }
+            width: $base-width*11;
         }
         &__title {
             display: block;
             margin-left: $base-width;
             position: relative;
-            .col5 {
-                position: absolute;
-                top: 50px;
-                // left: 50px;
-                margin-left: $base-width;
-            }
-            h1, button {
-                padding: $base-padding/2 auto;
-                line-height: 1;
-                text-transform: uppercase;
-            }
-            h1 {
-                font-size: $headers-font-size*1.6;
-                line-height: 1;
-            }
+        }
+        &__main-text, &__btn {
+            padding: $base-padding/2 auto;
+            line-height: 1;
+        }
+        &__main-text {
+            font-size: $headers-font-size*1.4;
+        }
+        &__text {
+            position: absolute;
+            top: 50px;
+            // left: 50px;
+            margin-left: $base-width;
         }
         &__paragraph {
-            line-height: 1.5;
             padding-bottom: $base-padding*2;
         }
     }
@@ -190,22 +213,43 @@
         width: $base-width;
         align-items: flex-start;
         position: relative;
-        p {
+        &__paragraph {
             margin-left: $base-padding*1.2;
         }
         &__facebook-icon {
             display: block;
             margin-left: $base-padding*0.7;
             position: absolute;
-            bottom: 0;
+            bottom: $base-padding*2.5;
         }
     }
-    .short-line {
-        height: 1px;
-        width: 20px;
-        background-color: $base-color;
-        display: inline-block;
-        margin-bottom: 4px;
+
+
+    //ABOUT SECTION//
+    .about {
+        height: 100%;
+        position: relative;
+        &__header {
+            width: $base-width*6;
+            float: right;
+        }
+        &__header {
+            margin: $base-margin*3 0;
+        }
+        &__photo {
+            width: $base-width*5;
+            float: left;
+            &--move-right {
+                position: absolute;
+                left: $base-width*3;
+            }
+        }
+        &__paragraph {
+            position: relative;
+        }
+    }
+    .section-header {
+        font-size: $headers-font-size;
     }
 }
 
@@ -222,14 +266,24 @@
     }
     .header {
         height: 750px;
-        &__title {
-            .col5 {
-                top: 100px;
-                left: 100px;
-            }
-            h1 {
-                font-size: $headers-font-size*2;
-            }
+        &__text {
+            top: 100px;
+            left: 100px;
+        }
+        &__main-text {
+            font-size: $headers-font-size*1.6;
+        }
+    }
+
+    //ABOUT SECTION//
+    .about {
+        &__header {
+            height: 280px;
+            margin: $base-margin*3 0;
+        }
+        &__photo--move-up {
+            position: absolute;
+            top: -20px;
         }
     }
 }
