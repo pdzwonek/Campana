@@ -178,6 +178,24 @@
     &__arrows--right {
         transform: rotate(90deg);
     }
+    &__text {
+        padding: $base-padding*3 $base-padding;
+    }
+
+}
+
+.long-line--horizontal {
+    transform: rotate(180deg);
+    display: inline-block;
+    margin: 0 0 6px 15px;
+}
+
+.section-header {
+    display: inline-block;
+    &--lowercase {
+        text-transform: lowercase;
+        float: right;
+    }
 }
 
 
@@ -302,6 +320,9 @@
         height: 500px;
         &__photo {
             max-width: 700px;
+        }
+        &__text {
+            padding: $base-padding*5 $base-padding;
         }
     }
 }
