@@ -128,27 +128,60 @@
     width: 20px;
     background-color: $base-color;
     display: inline-block;
-    margin-bottom: 4px;
+    margin: 0 0 4px 8px;
 }
 
 //about section//
 
 .about {
     &__header {
-        margin: $base-margin*2 0;
+        padding: $base-padding*3 $base-padding;
     }
     &__photo {
         background-color: $third-color;
-        height: 380px;
+        height: 280px;
     }
     &__paragraph--mobile, &__btn--mobile {
         padding: $base-padding;
     }
 }
 
-// .section-header {
-//     padding: $base-padding*4 $base-padding $base-padding*2 $base-padding;
-// }
+//gallery section//
+
+.gallery {
+    height: 320px;
+    &__photo {
+        background-color: $second-color;
+        height: 100%;
+    }
+    &__arrows {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__arrows-box {
+        height: 50px;
+        width: 50px;
+        background-color: $primary-bgr-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__arrows--left, &__arrows--right {
+        height: 25px;
+        width: 35px;
+    }
+    &__arrows--left {
+        transform: rotate(-90deg);
+    }
+    &__arrows--right {
+        transform: rotate(90deg);
+    }
+}
+
+
+
 
 @media (min-width: $tablet) {
     .nav {
@@ -232,13 +265,18 @@
         &__header {
             width: $base-width*6;
             float: right;
+            height: 380px;
+            padding: $base-padding;
         }
-        &__header {
-            margin: $base-margin*3 0;
+        &__header--center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         &__photo {
             width: $base-width*5;
             float: left;
+            height: 380px;
             &--move-right {
                 position: absolute;
                 left: $base-width*3;
@@ -246,10 +284,25 @@
         }
         &__paragraph {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__btn {
+            align-self: flex-start;
         }
     }
     .section-header {
         font-size: $headers-font-size;
+    }
+
+    //GALLERY//
+
+    .gallery {
+        height: 500px;
+        &__photo {
+            max-width: 700px;
+        }
     }
 }
 
@@ -277,13 +330,18 @@
 
     //ABOUT SECTION//
     .about {
-        &__header {
-            height: 280px;
-            margin: $base-margin*3 0;
+        &__header--height {
+            height: 360px;
         }
         &__photo--move-up {
             position: absolute;
             top: -20px;
         }
+    }
+
+    //GALLERY//
+
+    .gallery {
+
     }
 }
