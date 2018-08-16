@@ -150,23 +150,35 @@
 
 .gallery {
     height: 320px;
+    &__slider, &__slider ul {
+        height: 100%;
+        padding: 0;
+        position: relative;
+    }
     &__photo {
         background-color: $second-color;
         height: 100%;
+        width: 100%;
+        display: none;
+        &--visible {
+            display: inline-block;
+        }
     }
     &__arrows {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 140px;
     }
     &__arrows-box {
         height: 50px;
         width: 50px;
         background-color: $primary-bgr-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        &--left {
+            float: left;
+        }
+        &--right {
+            float: right;
+        }
     }
     &__arrows--left, &__arrows--right {
         height: 25px;
@@ -181,7 +193,6 @@
     &__text {
         padding: $base-padding*3 $base-padding;
     }
-
 }
 
 .long-line--horizontal {
@@ -195,11 +206,11 @@
     &--lowercase {
         text-transform: lowercase;
         float: right;
+        font-size: $base-font-size*1.2;
     }
 }
 
-
-
+//MEDIA QUERY//MEDIA QUERY//MEDIA QUERY//
 
 @media (min-width: $tablet) {
     .nav {

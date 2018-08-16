@@ -85,8 +85,11 @@
                         <p class="header__paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vulputate sem. Morbi vel nisi non urna pretium suscipit. Sed blandit vehicula lectus, non dignissim sem cursus cursus. Phasellus euismod pharetra ipsum quis euismod.
                         </p>
-                        <button class="header__btn">więcej</button>
-                        <div class="short-line"></div>
+                        <button class="header__btn">
+                            więcej
+                            <div class="short-line"></div>
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -145,23 +148,31 @@
         <!--GALLERY SECTION-->
         <section class="gallery container-fluid">
             <div class="row">
-                <div class="col12 gallery__photo">
-                    <img src="" alt="" />
+                <div class="col12 gallery__slider">
+                    <ul>
+                        <li class="gallery__photo">
+                            <img src="" alt="" />
+                        </li>
+                        <li class="gallery__photo">
+                            <img src="" alt="" />
+                        </li>
+                        <li class="gallery__photo">
+                            <img src="" alt="" />
+                        </li>
+                        <li class="gallery__photo">
+                            <img src="" alt="" />
+                        </li>
+                    </ul>
+
                     <div class="gallery__arrows">
-                        <button class="gallery__arrows-box">
+                        <button id="left-btn" class="gallery__arrows-box gallery__arrows-box--left">
                             <img class="gallery__arrows--left" src="img/arrow.svg" alt="lewa strzałka" />
                         </button>
-                        <button class="gallery__arrows-box">
+                        <button id="right-btn" class="gallery__arrows-box gallery__arrows-box--right">
                             <img class="gallery__arrows--right" src="img/arrow.svg" alt="prawa strzałka" />
                         </button>
                     </div>
                 </div>
-                <!-- <div class="col12 gallery__photo">
-                    <img src="" alt="" />
-                </div>
-                <div class="col12 gallery__photo">
-                    <img src="" alt="" />
-                </div> -->
             </div>
             <div class="container">
                 <div class="row">
@@ -174,7 +185,7 @@
                                 <div class="long-line long-line--horizontal"></div>
                             </div>
                             <div class="col12">
-                                <h2 class="section-header section-header--lowercase">lub zarezerwuj pokój (71)305 16 46</h2>
+                                <h2 class="section-header section-header--lowercase">lub zarezerwuj pokój (71) 305 16 46</h2>
                             </div>
                         </div>
                     </div>
