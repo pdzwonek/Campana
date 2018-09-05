@@ -33,28 +33,43 @@ document.addEventListener('DOMContentLoaded', function(){
 
     galleryBox.scrollLeft = ((galleryBox.offsetWidth - galleryPhoto.offsetWidth) /2);
 
+    var centeredPhoto = (galleryBox.offsetWidth - galleryPhoto.offsetWidth)/2;
 
-    // if(width <= 767) {
-    //
-    //     var indexOfPicture = 0;
-    //
-    //     leftBtn.addEventListener('click', function(){
-    //         listElements[indexOfPicture].classList.remove('gallery__photo--visible');
-    //         indexOfPicture --;
-    //         if(indexOfPicture < 0) {
-    //             indexOfPicture = listElements.length -1;
-    //         }
-    //         listElements[indexOfPicture].classList.add('gallery__photo--visible');
-    //     });
-    //     rightBtn.addEventListener('click', function(){
-    //         listElements[indexOfPicture].classList.remove('gallery__photo--visible');
-    //         indexOfPicture ++;
-    //         if(indexOfPicture > listElements.length -1) {
-    //             indexOfPicture = 0;
-    //         }
-    //         listElements[indexOfPicture].classList.add('gallery__photo--visible');
-    //     });
-    // }
+    console.log(centeredPhoto);
+    console.log(galleryBox.offsetWidth);
+
+
+    var offset = galleryPhoto.offsetWidth;
+    console.log(offset);
+
+        leftBtn.addEventListener('click', function(){
+
+            galleryBox.scrollLeft += offset;
+            centeredPhoto += offset;
+            console.log(centeredPhoto);
+            // listElements[indexOfPicture].classList.remove('gallery__photo--visible');
+            // indexOfPicture --;
+            // if(indexOfPicture < 0) {
+            //     indexOfPicture = listElements.length -1;
+            // }
+            // listElements[indexOfPicture].classList.add('gallery__photo--visible');
+        });
+
+
+        rightBtn.addEventListener('click', function(){
+
+            galleryBox.scrollLeft = -(offset*2);
+            centeredPhoto -= offset*2;
+            console.log(centeredPhoto);
+
+            // listElements[indexOfPicture].classList.remove('gallery__photo--visible');
+            // indexOfPicture ++;
+            // if(indexOfPicture > listElements.length -1) {
+            //     indexOfPicture = 0;
+            // }
+            // listElements[indexOfPicture].classList.add('gallery__photo--visible');
+        });
+
 
     // if(width > 767) {
     //

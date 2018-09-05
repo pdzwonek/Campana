@@ -128,7 +128,7 @@
     width: 20px;
     background-color: $base-color;
     display: inline-block;
-    margin: 0 0 4px 8px;
+    margin: 0 8px 4px 8px;
 }
 
 //about section//
@@ -160,12 +160,12 @@
         background-color: rgb(200, 165, 152);
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
         cursor: pointer;
         list-style: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        // &::-webkit-scrollbar {
+        //     display: none;
+        // }
     }
     &__photo {
         background-color: $second-color;
@@ -213,13 +213,46 @@
 
 .section-header {
     display: inline-block;
-    padding-right: 10px;
     &--lowercase {
         text-transform: lowercase;
         float: right;
         font-size: $base-font-size*1.2;
     }
 }
+
+//RECOMMENDATION SECTION//
+
+.recommendation {
+    padding: $base-padding*6 0;
+    &__panel, &__link {
+        padding: $base-padding*2;
+    }
+    &__panel {
+        background-color: #b7b7b7;
+    }
+    &__btn {
+        float: right;
+    }
+    &__link-text {
+        padding-top: $base-padding;
+        padding-bottom: $base-padding;
+    }
+    &__btn {
+        padding-top: 40px;
+        .short-line {
+            padding-right: 20px;
+        }
+    }
+    &__person {
+        padding-bottom: $base-padding;
+    }
+    &__line {
+        margin: 27px 20px 0 -26px;
+    }
+
+}
+
+
 
 //MEDIA QUERY//MEDIA QUERY//MEDIA QUERY//
 
@@ -351,6 +384,29 @@
     .long-line--horizontal {
         margin-bottom: 8px;
     }
+
+    //RECOMMENDATION//
+
+    .recommendation {
+        &__panel, &__link {
+            padding: $base-padding*4;
+        }
+        &__panel {
+            width: $base-width*8;
+            float: left;
+            &--reverse {
+                float: right;
+            }
+        }
+        &__link {
+            width: $base-width*4;
+            float: right;
+            &--reverse {
+                float: left;
+            }
+        }
+    }
+
 }
 
 @media (min-width: $desktop) {
