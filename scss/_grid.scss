@@ -7,7 +7,6 @@ $base-width: 100%/12;
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  // border: 1px solid black;
 }
 
 .container-fluid {
@@ -17,7 +16,6 @@ $base-width: 100%/12;
 
 .row {
     margin: 0;
-    // border: 2px solid black;
     height: 100%;
 }
 
@@ -33,7 +31,6 @@ $base-width: 100%/12;
   min-height: 1px;
   width: $base-width;
   padding: $base-padding;
-  // border: 2px solid red;
 }
 
 @for $i from 1 through 12{

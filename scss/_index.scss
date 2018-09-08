@@ -44,8 +44,6 @@
             font-weight: 700;
         }
     }
-
-
 }
 
 //mobile navigation - humburger//
@@ -146,6 +144,13 @@
     }
 }
 
+.section-header {
+    text-transform: uppercase;
+    &--lowercase {
+        text-transform: lowercase;
+    }
+}
+
 //gallery section//
 
 .gallery {
@@ -209,6 +214,7 @@
     transform: rotate(180deg);
     display: inline-block;
     margin-bottom: 6px;
+    margin-left: 20px;
 }
 
 .section-header {
@@ -250,6 +256,62 @@
         margin: 27px 20px 0 -26px;
     }
 
+}
+
+//FOOTER//
+
+.footer {
+    background-color: #eee;
+    &__content {
+        padding: $base-padding*5 0;
+        position: relative;
+    }
+    &__logo {
+        float: left;
+    }
+    &__title {
+        text-transform: uppercase;
+    }
+    &__about {
+        display: flex;
+        justify-content: center;
+    }
+    &__about-despription {
+        display: none;
+    }
+    &__data-content, &__links-content {
+        list-style: none;
+    }
+    &__links-content {
+        display: none;
+    }
+    &__data {
+        text-align: center;
+        line-height: 3;
+    }
+    &__data-content--upper {
+        &:last-child {
+            text-transform: uppercase;
+        }
+    }
+    &__icon {
+        margin-bottom: -5px;
+    }
+    &__rights {
+        color: #a1a1a1;
+        text-align: center;
+    }
+    &__line {
+        height: 1px;
+        padding: 0;
+        background-color: #d4d4d4;
+    }
+}
+
+.long-line--upper {
+    margin-top: 10px;
+    margin-right: 20px;
+    float: left;
 }
 
 
@@ -299,20 +361,20 @@
             position: relative;
         }
         &__main-text, &__btn {
-            padding: $base-padding/2 auto;
             line-height: 1;
         }
         &__main-text {
             font-size: $headers-font-size*1.4;
+            text-transform: uppercase;
         }
         &__text {
             position: absolute;
             top: 50px;
-            // left: 50px;
             margin-left: $base-width;
         }
         &__paragraph {
             padding-bottom: $base-padding*2;
+
         }
     }
     .vertical-text {
@@ -365,6 +427,7 @@
             align-self: flex-start;
         }
     }
+
     .section-header {
         font-size: $headers-font-size;
     }
@@ -407,6 +470,32 @@
         }
     }
 
+    //FOOTER//
+
+    .footer {
+        &__about {
+            width: $base-width*5;
+            display: block;
+        }
+        &__about-despription {
+            display: block;
+            padding-top: $base-padding*3;
+            line-height: 2;
+        }
+        &__links {
+            width: $base-width*3;
+            text-align: center;
+            line-height: 2.5;
+        }
+        &__links-content {
+            display: block;
+        }
+        &__data {
+            width: $base-width*4;
+            text-align: right;
+            line-height: 3;
+        }
+    }
 }
 
 @media (min-width: $desktop) {
@@ -427,7 +516,7 @@
             left: 100px;
         }
         &__main-text {
-            font-size: $headers-font-size*1.6;
+            font-size: $headers-font-size*2;
         }
     }
 
