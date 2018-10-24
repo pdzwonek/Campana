@@ -13,12 +13,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $headers-font;
-    // text-transform: uppercase;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
 }
 
 button {
@@ -26,6 +20,11 @@ button {
     background-color: transparent;
     cursor: pointer;
     text-transform: uppercase;
+    color: $base-color;
+    font-size: $base-font-size;
+    &:hover {
+        font-weight: 700;
+    }
 }
 
 a {

@@ -15,6 +15,7 @@
         background-color: $primary-bgr-color;
     }
 
+
     //after clicking the button - humburger menu
 
     &--unvisible {
@@ -37,11 +38,14 @@
         display: block;
         text-align: center;
         padding: $base-padding*2;
+        color: $text-color;
         &:hover {
             font-weight: 700;
+            color: $base-color;
         }
         &--active {
             font-weight: 700;
+            color: $base-color;
         }
     }
 }
@@ -63,7 +67,7 @@
         width: 28px;
         height: 3px;
         margin: $base-margin/3 0;
-        background-color: $base-color;
+        background-color: $text-color;
         transition: 1s;
         &--change {
             &:first-child {
@@ -86,9 +90,14 @@
     height: 420px;
     &__photo {
         background: $second-color;
+        background-image: url(../img/3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         height: 100%;
         max-width: 100%;
         float: right;
+        padding: 0;
     }
     &__title {
         display: none;
@@ -102,11 +111,12 @@
     align-items: center;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    color: $text-color;
     &__paragraph {
         writing-mode: vertical-rl;
         text-orientation: sideways;
         transform: rotate(180deg);
-        margin-top: 30px;
+        margin-top: 45px;
     }
     &__facebook-icon {
         display: none;
@@ -118,13 +128,13 @@
     transform: rotate(90deg);
     height: 1px;
     width: 45px;
-    background-color: $base-color;
+    background-color: $text-color;
 }
 
 .short-line {
     height: 1px;
     width: 20px;
-    background-color: $base-color;
+    background-color: $text-color;
     display: inline-block;
     margin: 0 8px 4px 8px;
 }
@@ -134,18 +144,28 @@
 .about {
     &__header {
         padding: $base-padding*3 $base-padding;
+        color: $text-color;
     }
     &__photo {
         background-color: $third-color;
         height: 280px;
+        padding: 0;
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
     }
     &__paragraph--mobile, &__btn--mobile {
         padding: $base-padding;
+    }
+    .vertical-text {
+        display: none;
     }
 }
 
 .section-header {
     text-transform: uppercase;
+    color: $base-color;
     &--lowercase {
         text-transform: lowercase;
     }
@@ -244,7 +264,7 @@
         padding-bottom: $base-padding;
     }
     &__btn {
-        padding-top: 40px;
+        padding-top: $base-padding*4;
         .short-line {
             padding-right: 20px;
         }
@@ -255,7 +275,9 @@
     &__line {
         margin: 27px 20px 0 -26px;
     }
-
+    &__paragraph {
+        color: $text-color;
+    }
 }
 
 //FOOTER//
@@ -284,6 +306,11 @@
     }
     &__links-content {
         display: none;
+    }
+    &__link {
+        &:hover {
+            font-weight: 700;
+        }
     }
     &__data {
         text-align: center;
@@ -340,7 +367,7 @@
             }
         }
         &__link {
-            padding: $base-padding*4 $base-padding*2;
+            padding: $base-padding*6 $base-padding*2 $base-padding*2 $base-padding*2;
         }
     }
     .mobile {
@@ -361,10 +388,10 @@
             position: relative;
         }
         &__main-text, &__btn {
-            line-height: 1;
+            line-height: 1.2;
         }
         &__main-text {
-            font-size: $headers-font-size*1.4;
+            font-size: $headers-font-size*1.2;
             text-transform: uppercase;
         }
         &__text {
@@ -373,8 +400,9 @@
             margin-left: $base-width;
         }
         &__paragraph {
+            padding-top: $base-padding;
             padding-bottom: $base-padding*2;
-
+            color: $text-color;
         }
     }
     .vertical-text {
@@ -398,7 +426,7 @@
         height: 100%;
         position: relative;
         &__header {
-            width: $base-width*6;
+            width: $base-width*5;
             float: right;
             height: 380px;
             padding: $base-padding;
@@ -414,7 +442,7 @@
             height: 380px;
             &--move-right {
                 position: absolute;
-                left: $base-width*3;
+                left: $base-width;
             }
         }
         &__paragraph {
@@ -422,6 +450,21 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            width: $base-width*5;
+        }
+        .vertical-text {
+            display: flex;
+            width: $base-width*2;
+            float: right;
+            &__paragraph {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            &--left {
+                float: left;
+                width: $base-width;
+                align-items: flex-end;
+            }
         }
         &__btn {
             align-self: flex-start;
@@ -468,11 +511,18 @@
                 float: left;
             }
         }
+        &__link-text {
+            font-size: $base-font-size*1.3;
+        }
+        &__btn {
+            padding-top: $base-padding*2;
+        }
     }
 
     //FOOTER//
 
     .footer {
+        margin-top: $base-padding*6;
         &__about {
             width: $base-width*5;
             display: block;
@@ -506,7 +556,7 @@
             }
         }
         &__link {
-            padding: $base-padding*4;
+            padding: $base-padding*6 $base-padding*4 $base-padding*2 $base-padding*4;
         }
     }
     .header {
@@ -516,7 +566,7 @@
             left: 100px;
         }
         &__main-text {
-            font-size: $headers-font-size*2;
+            font-size: $headers-font-size*1.7;
         }
     }
 
